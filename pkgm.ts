@@ -372,7 +372,10 @@ async function mirror_directory(dst: string, src: string, prefix: string) {
         await Deno.link(sourcePath, targetPath);
       } catch {
         if (!warned_copy_fallback) {
-          console.warn("%c! hardlinking failed (possibly cross-device?), falling back to file copy", "color:yellow");
+          console.warn(
+            "%c! hardlinking failed (possibly cross-device?), falling back to file copy",
+            "color:yellow",
+          );
           warned_copy_fallback = true;
         }
         await Deno.copyFile(sourcePath, targetPath);
