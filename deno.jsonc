@@ -1,0 +1,10 @@
+{
+  "fmt": {
+    "exclude": ["tea.yaml"] // not germane
+  },
+  "lint": {
+    "rules": {
+      "exclude": ["no-import-prefix"] // we still use jsr:
+    }
+  }
+}
